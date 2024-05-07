@@ -1,0 +1,28 @@
+{
+  "name": "toolbox-api-file",
+  "version": "1.0.0",
+  "description": "Toolbox code challenge api file - fullstack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgetinoco777/toolbox-api-file.git"
+  },
+  "author": "jorge.tinoco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgetinoco777/toolbox-api-file/issues"
+  },
+  "homepage": "https://github.com/jorgetinoco777/toolbox-api-file#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
