@@ -1,8 +1,7 @@
-const { VERSION } = require("../environments");
-const { getFileByName } = require("../services");
+const { getFiles } = require("../services");
 
 const routes = ( app ) => {
-    app.get(`/api/${ VERSION }/file`, getFileByName);
+    app.get(`/files/data`, getFiles);
 };
 
 module.exports = routes;
