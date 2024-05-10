@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jorgetinoco777/toolbox-api-file#readme",
   "dependencies": {
+    "@types/chai": "^4.3.16",
     "axios": "1.6.8",
     "chai": "5.1.0",
     "cors": "2.8.5",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/axios": "0.14.0",
+    "@types/mocha": "10.0.6",
     "http-server": "14.1.1",
     "nodemon": "3.1.0"
   }
