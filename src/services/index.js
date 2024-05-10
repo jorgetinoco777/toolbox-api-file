@@ -55,7 +55,7 @@ const formattedFileContent = (fileName, fileContent) => {
   };
 };
 
-const getFiles = async (req, res) => {
+const getFilesByName = async (req, res) => {
   const { fileName } = req.query;
 
   let existsFile = "";
@@ -65,7 +65,10 @@ const getFiles = async (req, res) => {
 
   if (existsFile && existsFile.length > 0 && fileName) fileList = [existsFile];
 
-  if (!existsFile && fileName) {res.json([]);return;} 
+  if (!existsFile && fileName) {
+    res.json([]);
+    return;
+  }
 
   const promises = [];
 
@@ -85,4 +88,13 @@ const getFiles = async (req, res) => {
   });
 };
 
-module.exports = { getFiles };
+const getFiles = async (req, res) => {
+  const { fileName } = req.query;
+
+  let existsFile = "";
+  let fileList = await getFileList();
+
+  res.json(fileList ? fileList : []);
+};
+
+module.exports = { getFiles, getFilesByName };
