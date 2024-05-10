@@ -44,7 +44,8 @@ const formattedFileContent = (fileName, fileContent) => {
   fileLinesWithoutHeader.map((line) => {
     const [file, text, num, hex] = line.split(",");
 
-    if (file && text && num && hex) lines.push({ text, number: num, hex });
+    if (file && text && num && Number(num) && hex)
+      lines.push({ text, number: num, hex });
   });
   if (lines.length == 0) return;
 
@@ -55,9 +56,17 @@ const formattedFileContent = (fileName, fileContent) => {
 };
 
 const getFiles = async (req, res) => {
-  //const { test } = req.query;
+  const { fileName } = req.query;
 
-  const fileList = await getFileList();
+  let existsFile = "";
+  let fileList = await getFileList();
+
+  if (fileName) existsFile = fileList.find((file) => file === fileName);
+
+  if (existsFile && existsFile.length > 0 && fileName) fileList = [existsFile];
+
+  if (!existsFile && fileName) {res.json([]);return;} 
+
   const promises = [];
 
   fileList.forEach((fileName) => {
