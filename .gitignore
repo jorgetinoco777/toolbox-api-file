@@ -3,3 +3,9 @@
 
 # Exclude files
 package-lock.json
+
+#vsc
+.vscode
+
+# environments
+.env
