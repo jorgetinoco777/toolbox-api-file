@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { EXTERNAL_API } = require("../environment/environment");
 
 const getFileList = () => {
   // Get files list
