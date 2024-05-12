@@ -17,7 +17,7 @@
 #
 ***
 
-#### RUN PROJECT
+##### RUN PROJECT
 
 Go to the directory where you clone the project.
 
@@ -25,7 +25,7 @@ Go to the directory where you clone the project.
 
     <code style="font-size: 12px">`$ npm install`</code>
 
-2. Create the .env file with the following variables
+2. Create the `.env` file with the following variables
 
     >PORT=3000
 
@@ -34,21 +34,19 @@ Go to the directory where you clone the project.
     >SECRET_KEY=secret key value
 
 
-3. Build docker image: node-api-toolbox
+3. Run project: node-api-toolbox
 
-    <code style="font-size: 12px">`$ docker build . -t node-api-toolbox`</code>
+    <code style="font-size: 12px">`$ npm start`</code>
 
-4. Run api rest
+<br />
 
-    <code style="font-size: 12px">`$ docker run --env-file=./.env -p 3000:3000 node-api-toolbox`</code>
-
->**Important:** This api will be running on port 3000.
+**Important:** This api will be running on port 3000.
 
 
 
 ***
 
-#### RUN UNIT TEST
+##### RUN UNIT TEST
 
 Go to the directory where you clone the project.
 
@@ -99,3 +97,11 @@ Go to the directory where you clone the project.
 5. Open the following url in the browser
 
     <code>`http://localhost:3000/files/data`</code>
+
+#
+***
+
+
+#### Important!
+
+<span style="font-size: 14px"><b>Message: </b>If you've made it this far, I hope everything worked well. Thank you, I had fun doing this challenge.</span>
