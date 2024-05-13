@@ -34,10 +34,7 @@ const getFilesByName = async (req, res) => {
   });
 };
 
-const getFiles = async (req, res) => {
-  const { fileName } = req.query;
-
-  let existsFile = "";
+const getFiles = async (_, res) => {
   let fileList = await getFileList();
 
   res.json(fileList ? fileList : []);
